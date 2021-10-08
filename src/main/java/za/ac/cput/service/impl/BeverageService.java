@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 @Service
 public class BeverageService implements IBeverageService {
     @Autowired
-    private static BeverageService service=null;
     private BeverageRepository repository;
+    private static BeverageService service=null;
 
     public static BeverageService getService() {
         if(service==null) {service= new BeverageService();}
