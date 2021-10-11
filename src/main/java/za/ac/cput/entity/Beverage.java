@@ -17,14 +17,46 @@ public class Beverage {
     private String category;
     private double price;
 
+    protected Beverage() {}
+
     public Beverage (Builder builder)
     {
         this.bevCode = builder.bevCode;
         this.bevName = builder.bevName;
         this.category =builder.category;
         this.price = builder.price;
+    }
 
+    public int getBevCode() {
+        return bevCode;
+    }
 
+    public String getBevName() {
+        return bevName;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setBevCode(int bevCode) {
+        this.bevCode = bevCode;
+    }
+
+    public void setBevName(String bevName) {
+        this.bevName = bevName;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public static class Builder{
@@ -32,7 +64,6 @@ public class Beverage {
         private String bevName;
         private String category;
         private double price;
-
 
 
         public Builder setBevCode(int bevCode) {
@@ -60,22 +91,6 @@ public class Beverage {
         public Beverage build()
         {
             return new Beverage(this);
-        }
-
-        public int getBevCode() {
-            return bevCode;
-        }
-
-        public String getBevName() {
-            return bevName;
-        }
-
-        public String getCategory() {
-            return category;
-        }
-
-        public double getPrice() {
-            return price;
         }
 
         public Builder copy(Beverage beverage)
