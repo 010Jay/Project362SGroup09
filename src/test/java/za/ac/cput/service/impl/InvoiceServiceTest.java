@@ -25,7 +25,7 @@ class InvoiceServiceTest
     @BeforeEach
     void setUp() {
 
-        invoice = InvoiceFactory.createInvoice("0010", invoice.getInvoiceDate(), "217091229", "65412", "R1000");
+        invoice = InvoiceFactory.createInvoice("0010", "10/10/2021", "217091229", "65412", "R1000");
     }
 
     @Test
