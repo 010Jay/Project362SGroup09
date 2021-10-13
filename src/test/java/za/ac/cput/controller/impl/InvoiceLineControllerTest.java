@@ -18,10 +18,10 @@ class InvoiceLineControllerTest
     private static InvoiceLine invoiceLine = InvoiceLineFactory.createInvoice("9000", "46664", "fd101", "bv001", "25", "50", "R10000");
     @Autowired
     private TestRestTemplate restTemplate; // A Rest Template
-    private final String BASE1_URL = "http://localhost:8080/invoiceLine/getInvoiceLineDetails";
+    private final String BASE1_URL = "http://localhost:8080/invoiceLine/saveInvoiceLineDetails";
 
     @Test
-    void testSaveStudentDetails()
+    void testSaveInvoiceLineDetails()
     {
         System.out.println("URL: " + BASE1_URL);
         ResponseEntity<Boolean> postResponse = restTemplate.postForEntity(BASE1_URL, invoiceLine, Boolean.class);

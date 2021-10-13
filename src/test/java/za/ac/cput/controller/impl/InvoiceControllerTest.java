@@ -36,7 +36,7 @@ class InvoiceControllerTest
         }
 
     @Test
-    void testSaveStudentDetails()
+    void testSaveInvoiceDetails()
     {
         System.out.println("URL: " + BASE2_URL);
         ResponseEntity<Boolean> postResponse = restTemplate.postForEntity(BASE2_URL, invoice, Boolean.class);
