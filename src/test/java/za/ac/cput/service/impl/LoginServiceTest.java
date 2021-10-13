@@ -27,12 +27,18 @@ class LoginServiceTest {
     @BeforeEach
     void setUp() {
 
-        login = LoginFactory.createLogin("217009301", "jon010snow", "Password01");
+        login = LoginFactory.createLogin("125891654", "ADMIN", "123456");
     }
 
     @Test
     void testLogin()
     {
-        assertTrue(service.getLoginDetails(login.getUsername(), login.getPassword()));
+        assertTrue(service.getLoginDetails("jon010snow", "Password01"));
+    }
+
+    @Test
+    void testSaveRegistrationDetails()
+    {
+        assertTrue(service.saveRegistrationDetails(login));
     }
 }

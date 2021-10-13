@@ -49,4 +49,18 @@ public class LoginService implements ILoginService {
 
        return false;
     }
+
+    @Override
+    public boolean saveRegistrationDetails(Login login) {
+        Login loginResult = this.repository.save(login);
+
+        if(loginResult != null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
 }

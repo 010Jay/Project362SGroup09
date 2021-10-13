@@ -8,10 +8,8 @@ package za.ac.cput.controller.impl;
  **/
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import za.ac.cput.entity.Login;
 import za.ac.cput.service.impl.LoginService;
 
 @RestController
@@ -26,6 +24,12 @@ public class LoginController {
     public boolean getLoginDetails(@RequestParam("username") String username, @RequestParam("password") String password)
     {
         return this.loginService.getLoginDetails(username, password);
+    }
+
+    @PostMapping("/saveRegistrationDetails")
+    public boolean saveRegistrationDetails(@RequestBody Login login)
+    {
+        return this.loginService.saveRegistrationDetails(login);
     }
 
 }
