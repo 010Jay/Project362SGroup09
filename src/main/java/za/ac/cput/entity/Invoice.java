@@ -1,4 +1,8 @@
 package za.ac.cput.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Invoice.java
  * Entity for the Invoice
@@ -6,9 +10,15 @@ package za.ac.cput.entity;
  * Date: 14 September 2021
  **/
 
+@Entity
 public class Invoice {//start of class
+
+    @Id
     //Attributes
-    private String invoiceNumber, invoiceDate, studentNumber, eventCode, totalPrice;
+    private String invoiceNumber;
+    private String invoiceDate, studentNumber, eventCode, totalPrice;
+
+    protected Invoice(){};
 
     public Invoice(Builder builder){
 

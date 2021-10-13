@@ -11,7 +11,7 @@ import za.ac.cput.entity.InvoiceLine;
 
 public class InvoiceLineFactory {
 
-    public InvoiceLine createInvoice(String invoiceLineNumber, String invoiceNumber, String foodId, String bevCode, String foodQuantity, String bevQuantity, String price)
+    public static InvoiceLine createInvoice(String invoiceLineNumber, String invoiceNumber, String foodId, String bevCode, String foodQuantity, String bevQuantity, String price)
     {
         return new InvoiceLine.Builder().setInvoiceLineNumber(invoiceLineNumber)
                                         .setInvoiceNumber(invoiceNumber)

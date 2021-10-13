@@ -1,4 +1,8 @@
 package za.ac.cput.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * InvoiceLine.java
  * Entity for the Invoice Line
@@ -6,9 +10,15 @@ package za.ac.cput.entity;
  * Date: 14 September 2021
  **/
 
+@Entity
 public class InvoiceLine {//start of class
+
+    @Id
     //Attributes
-    private String invoiceLineNumber, invoiceNumber, foodId, bevCode, foodQuantity, bevQuantity, price;
+    private String invoiceLineNumber;
+    private String invoiceNumber, foodId, bevCode, foodQuantity, bevQuantity, price;
+
+    protected InvoiceLine(){};
 
     public InvoiceLine(Builder builder){
         this.invoiceLineNumber = builder.invoiceLineNumber;

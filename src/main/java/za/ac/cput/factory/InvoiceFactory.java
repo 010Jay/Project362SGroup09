@@ -11,7 +11,7 @@ import za.ac.cput.entity.Invoice;
 
 public class InvoiceFactory {
 
-    public Invoice createInvoice(String invoiceNumber, String invoiceDate, String studentNumber, String eventCode, String totalPrice)
+    public static Invoice createInvoice(String invoiceNumber, String invoiceDate, String studentNumber, String eventCode, String totalPrice)
     {
         return new Invoice.Builder().setInvoiceNumber(invoiceNumber)
                                     .setInvoiceDate(invoiceDate)
