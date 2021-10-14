@@ -13,6 +13,7 @@ import za.ac.cput.factory.InvoiceFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Deprecated
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class InvoiceControllerTest
 {//start of class
